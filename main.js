@@ -7,10 +7,23 @@ import("https://api.ipify.org?format=jsonp&callback=getIP");
 // Store client IP address
 let ipAddress = '';
 
+// Store current time
+let currentTime = '';
+
 // Quote Container
 const randomQuote = document.getElementById('quote-copy');
 // Author Container
 const quoteAuthor = document.getElementById('quote-author');
+// Refresh Quote Button
+const quoteRefresh = document.getElementById('refresh-btn');
+
+
+// EVENT LISTENERS
+
+// Refresh Quote Button Event Listener
+quoteRefresh.addEventListener('click', () => {
+  getQuote();
+});
 
 // IPBase Key
 // NMXA3YiDSaXKEhEgLUFu7T5LXCHkMAB3cc0nNQaM
@@ -30,6 +43,7 @@ async function getLocationData() {
     `http://worldtimeapi.org/api/ip/${ipAddress}`
   ).then(res => res.json())
   .then(res => {
+    currentTime =res['datetime'].split('').slice(11, 16).join('');
     console.log(res['datetime']);
     console.log(res['day_of_week']);
   });

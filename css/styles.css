@@ -59,6 +59,9 @@ html {
 .bg-div {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
@@ -98,6 +101,12 @@ html {
 /* Quote Author */
 .quote-author {
   font-weight: var(--fw-bold);
+}
+
+
+/* Time and Location Container */
+.time-location-container {
+  margin-bottom: 2.5rem;
 }
 
 
