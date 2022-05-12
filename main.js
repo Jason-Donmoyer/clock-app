@@ -7,6 +7,11 @@ import("https://api.ipify.org?format=jsonp&callback=getIP");
 // Store client IP address
 let ipAddress = '';
 
+// Quote Container
+const randomQuote = document.getElementById('quote-copy');
+// Author Container
+const quoteAuthor = document.getElementById('quote-author');
+
 // IPBase Key
 // NMXA3YiDSaXKEhEgLUFu7T5LXCHkMAB3cc0nNQaM
 //"https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=YOUR-APIKEY"
@@ -171,6 +176,8 @@ async function getQuote() {
   .then(res => {
     console.log(res['en']);
     console.log(res['author']);
+    randomQuote.textContent = res['en'];
+    quoteAuthor.textContent = res['author'];
   })
 }
 

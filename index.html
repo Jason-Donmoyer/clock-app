@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
   
   <title>Frontend Mentor | Clock App</title>
 </head>
@@ -12,9 +14,16 @@
 
   <!-- Main Content Start -->
   <main class="main-content main-content-dark-bg">
+    <!-- Start Background Div -->
+    <div class="bg-div">
+
     <!-- Quote Container Start -->
     <article class="quote-container">
-
+      <div class="quote-content-container">
+        <p id="quote-copy" class="quote-copy"></p>
+        <div id="refresh-btn" class="refresh-btn"></div>
+      </div>
+      <p id="quote-author" class="quote-author"></p>
     </article>
     <!-- Quote Container End -->
 
@@ -27,9 +36,12 @@
     <!-- Show / Hide Info Button Start -->
     <div id="info-btn" class="info-btn">More</div>
     <!-- Show / Hide Info Button End-->
+    </div>
+    <!-- End Background Div -->
     
   </main>
   <!-- Main Content End -->
+
 
   <!-- Stats Container Start -->
   <!-- Show / Hide on Button Click Event -->

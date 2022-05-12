@@ -1,0 +1,112 @@
+/* IMPORTS */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+/* VARIABLES */
+:root {
+
+  /* Font-family */
+  --main-font-family: 'Inter', sans-serif;
+
+  /* Font-weights */
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  /* Colors */
+  --main-dark-color: rgba(0, 0, 0, 1);
+  --main-nuetral-color: rgva(48, 48, 48, 1);
+  --main-light-color: rgba(255, 255, 255, 1);
+
+}
+
+
+/* HTML */
+/* Font-size and box-sizing */
+
+html {
+  font-size: 16px;
+  font-family: var(--main-font-family);
+  font-weight: var(--fw-reg);
+  /* color: var(--main-light-color); */
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* MAIN STYLES */
+
+/* body */
+.main-container {
+  height: 100vh;
+  color: var(--main-light-color);
+}
+
+
+/* Main Content */
+.main-content {
+  height: 100%; 
+  background-image: url(../assets/mobile/bg-image-daytime.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Background Div for Image Styling */
+.bg-div {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Quote Container */
+.quote-container {
+  padding-top: 1.979375rem;
+  padding-right: 1.59375rem;
+  padding-left: 1.59375rem;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+}
+
+
+/* Quote Content Container */
+.quote-content-container {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Quote Copy */
+.quote-copy {
+  max-width: 90%;
+}
+
+
+/* Refresh Button */
+.refresh-btn {
+  height: 1.041875rem;
+  width: 1.041875rem;
+  /* margin-left: 1.041875rem; */
+  background-image: url(../assets/desktop/icon-refresh.svg);
+}
+
+
+/* Quote Author */
+.quote-author {
+  font-weight: var(--fw-bold);
+}
+
+
+
+/* STATS DROPDOWN */
+
+/* Stats container */
+.stats-container {
+  /* height: 30%; */
+  /* background-color: red; */
+  display: none;
+}
