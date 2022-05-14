@@ -16,7 +16,12 @@ let ipAddress = '';
 // Store current time
 let currentTime = '';
 
+// Main Background Container
+const bgContainer = document.getElementById('main-bg-container');
+
 // Quote Container
+const quoteContainer = document.getElementById('quote-container');
+// Quote Copy
 const randomQuote = document.getElementById('quote-copy');
 // Author Container
 const quoteAuthor = document.getElementById('quote-author');
@@ -25,6 +30,18 @@ const quoteRefresh = document.getElementById('refresh-btn');
 
 // Time Copy Container
 const timeCopyContainer = document.getElementById('time-copy');
+
+// Info Button
+const infoBtn = document.getElementById('info-btn');
+// Info Button Copy
+const infoBtnCopy = document.getElementById('info-btn-copy');
+// Info Button Icon
+const infoBtnIcon = document.getElementById('info-btn-icon');
+// Button clicked state
+let btnClicked = false;
+
+// Stats section
+const statsSection = document.getElementById('stats-section');
 
 // *******************************************************************************************
 // EVENT LISTENERS
@@ -35,14 +52,38 @@ quoteRefresh.addEventListener('click', () => {
   getQuote();
 });
 
-// IPBase Key
-// NMXA3YiDSaXKEhEgLUFu7T5LXCHkMAB3cc0nNQaM
-//"https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=YOUR-APIKEY"
-
+// Show Hide Info section
+infoBtn.addEventListener('click', () => {
+  
+  btnClicked ? console.log('active') : console.log('negative');
+  if (!btnClicked) {
+    statsSection.style.display = 'flex';
+    quoteContainer.style.display = 'none';
+    bgContainer.style.height = '62%';
+    bgContainer.style.justifyContent = 'flex-end';
+    infoBtnCopy.textContent = 'LESS';
+    infoBtnIcon.style.backgroundImage = "url('assets/desktop/icon-arrow-up.svg')";
+    btnClicked = true;
+  } else if (btnClicked) {
+    statsSection.style.display = 'none';
+    quoteContainer.style.display = 'block';
+    bgContainer.style.height = '100%';
+    bgContainer.style.justifyContent = 'space-between';
+    infoBtnCopy.textContent = 'MORE';
+    infoBtnIcon.style.backgroundImage = "url('assets/desktop/icon-arrow-down.svg')";
+    btnClicked = false;
+  }
+  
+  
+});
 
 // *******************************************************************************************
 // FUNCTIONS
 // *******************************************************************************************
+
+// IPBase Key
+// NMXA3YiDSaXKEhEgLUFu7T5LXCHkMAB3cc0nNQaM
+//"https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=YOUR-APIKEY"
 
 // Function to get IP adress from client
 function getIP(json) { 

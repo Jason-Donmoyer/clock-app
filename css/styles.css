@@ -56,7 +56,7 @@ html {
 
 
 /* Background Div for Image Styling */
-.bg-div {
+.main-bg-container {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
@@ -224,7 +224,8 @@ html {
 
 /* Stats container */
 .stats-container {
-  /* height: 30%; */
-  /* background-color: red; */
+  height: 38%;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(40px);
   display: none;
 }
