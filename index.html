@@ -30,11 +30,22 @@
     <!-- Time and Location Container Start -->
     <article class="time-location-container">
       <div class="greeting-container">
-        <h1 id="time-copy" class="time-copy"></h1>
+        <div class="greeting-copy-container">
+          <div class="greeting-icon"></div>
+          <h2 id="greeting-copy" class="greeting-copy">GOOD MORNING</h2>
+        </div>
+        <div class="time-container">
+          <h1 id="time-copy" class="time-copy">34:34</h1>
+          <p id="timezone-copy" class="timezone-copy">EDT</p>
+        </div>
+        <h3 class="location-copy">IN <span id="city-location">LONDON</span>, <span id="country-location">UK</span></h3>
       </div>
 
       <!-- Show / Hide Info Button Start -->
-      <div id="info-btn" class="info-btn">More</div>
+      <div id="info-btn" class="info-btn">
+        <p id="info-btn-copy" class="info-btn-copy">MORE</p>
+        <div id="info-btn-icon" class="info-btn-icon"></div>
+      </div>
       <!-- Show / Hide Info Button End-->
       
     </article>
@@ -43,40 +54,41 @@
     
     </div>
     <!-- End Background Div -->
+
     <!-- Stats Container Start -->
-  <!-- Show / Hide on Button Click Event -->
-  <section class="stats-container stats-container-dark-bg">
+    <!-- Show / Hide on Button Click Event -->
+    <section class="stats-container stats-container-dark-bg">
 
-    <!-- Timezone Container Start -->
-    <article id="timezone" class="stat-container">
-      <h2 class="stat-headline">Current timezone</h2>
-      <p id="timezone-copy" class="stat-copy"></p>
-    </article>
-    <!-- Timezone Container End -->
+      <!-- Timezone Container Start -->
+      <article id="timezone" class="stat-container">
+        <h4 class="stat-headline">Current timezone</h4>
+        <p id="timezone-copy" class="stat-copy"></p>
+      </article>
+      <!-- Timezone Container End -->
 
-    <!-- Day of Year Container Start -->
-    <article id="day-of-year" class="stat-container">
-      <h2 class="stat-headline">Day of the year</h2>
-      <p id="day-of-year-copy" class="stat-copy"></p>
-    </article>
-    <!-- Day of Year Container End -->
+      <!-- Day of Year Container Start -->
+      <article id="day-of-year" class="stat-container">
+        <h4 class="stat-headline">Day of the year</h4>
+        <p id="day-of-year-copy" class="stat-copy"></p>
+      </article>
+      <!-- Day of Year Container End -->
 
-    <!-- Day of Week Container Start -->
-    <article id="day-of-week" class="stat-container">
-      <h2 class="stat-headline">Day of the week</h2>
-      <p id="day-of-week-copy" class="stat-copy"></p>
-    </article>
-    <!-- Day of Week Container End -->
+      <!-- Day of Week Container Start -->
+      <article id="day-of-week" class="stat-container">
+        <h4 class="stat-headline">Day of the week</h4>
+        <p id="day-of-week-copy" class="stat-copy"></p>
+      </article>
+      <!-- Day of Week Container End -->
 
-    <!-- Week Number Container Start -->
-    <article id="week-number" class="stat-container">
-      <h2 class="stat-headline">Week number</h2>
-      <p id="week-number-copy" class="stat-copy"></p>
-    </article>
-    <!-- Week Number Container End -->
+      <!-- Week Number Container Start -->
+      <article id="week-number" class="stat-container">
+        <h4 class="stat-headline">Week number</h4>
+        <p id="week-number-copy" class="stat-copy"></p>
+      </article>
+      <!-- Week Number Container End -->
 
-  </section>
-  <!-- Stats Container End -->
+    </section>
+    <!-- Stats Container End -->
 
   </main>
   <!-- Main Content End -->

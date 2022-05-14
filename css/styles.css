@@ -106,7 +106,116 @@ html {
 
 /* Time and Location Container */
 .time-location-container {
+  height: 17rem;
   margin-bottom: 2.5rem;
+  padding-left: 1.59375rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* Greeting Container */
+.greeting-container {
+  height: 11.5625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* Greeting Copy Container */
+.greeting-copy-container {
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Greeting Icon */
+.greeting-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url(../assets/desktop/icon-sun.svg);
+}
+
+
+/* Greeting Copy */
+.greeting-copy {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.1875rem;
+  margin-left: 1rem;
+}
+
+
+/* Time Container */
+.time-container {
+  height: 6.25rem;
+  display: flex;
+  align-items: baseline;
+}
+
+/* Time Copy */
+.time-copy {
+  font-size: 6.25rem;
+  line-height: 6.25rem;
+  letter-spacing: -0.15625rem;
+  font-weight: var(--fw-bold);
+}
+
+
+/* Timezone Copy */
+.timezone-copy {
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  margin-left: 0.3125rem;
+}
+
+
+/* Location Copy */
+.location-copy {
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.1875rem;
+  font-weight: var(--fw-bold);
+}
+
+
+/* Info Button */
+.info-btn {
+  height: 2.4375rem;
+  width: 7.1875rem;
+  background-color: var(--main-light-color);
+  border-radius: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+/* Info Button Copy */
+.info-btn-copy {
+  color: var(--main-dark-color);
+  opacity: 0.5;
+  font-size: 0.8rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.234375rem;
+  font-weight: var(--fw-bold);
+}
+
+
+/* Info Button Icon */
+.info-btn-icon {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+  margin-left: 0.78125rem;
+  background-color:var(--main-dark-color);
+  background-image: url(../assets/desktop/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 

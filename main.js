@@ -1,9 +1,15 @@
+// *******************************************************************************************
 // IMPORTS
+// *******************************************************************************************
+
 // Import ipify
 import("https://api.ipify.org?format=jsonp&callback=getIP");
 
 
+// *******************************************************************************************
 // VARIABLES
+// *******************************************************************************************
+
 // Store client IP address
 let ipAddress = '';
 
@@ -17,8 +23,12 @@ const quoteAuthor = document.getElementById('quote-author');
 // Refresh Quote Button
 const quoteRefresh = document.getElementById('refresh-btn');
 
+// Time Copy Container
+const timeCopyContainer = document.getElementById('time-copy');
 
+// *******************************************************************************************
 // EVENT LISTENERS
+// *******************************************************************************************
 
 // Refresh Quote Button Event Listener
 quoteRefresh.addEventListener('click', () => {
@@ -29,6 +39,10 @@ quoteRefresh.addEventListener('click', () => {
 // NMXA3YiDSaXKEhEgLUFu7T5LXCHkMAB3cc0nNQaM
 //"https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=YOUR-APIKEY"
 
+
+// *******************************************************************************************
+// FUNCTIONS
+// *******************************************************************************************
 
 // Function to get IP adress from client
 function getIP(json) { 
@@ -43,9 +57,10 @@ async function getLocationData() {
     `http://worldtimeapi.org/api/ip/${ipAddress}`
   ).then(res => res.json())
   .then(res => {
-    currentTime =res['datetime'].split('').slice(11, 16).join('');
+    currentTime = res['datetime'].split('').slice(11, 16).join('');
     console.log(res['datetime']);
     console.log(res['day_of_week']);
+    updateTime();
   });
 }
 
@@ -195,6 +210,17 @@ async function getQuote() {
   })
 }
 
+
+// Function to update time in UI
+function updateTime() {
+  timeCopyContainer.textContent = currentTime;
+}
+
+
+// *******************************************************************************************
+// FUNCTION CALLS
+// *******************************************************************************************
+
 getQuote();
-getCity();
+// getCity();
 getLocationData();
