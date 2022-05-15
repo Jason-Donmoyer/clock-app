@@ -99,7 +99,6 @@ async function getIpClient() {
       console.log(res);
       ipAddress = res.ip;
     })
-    
   } catch (error) {
     console.error(error);
   }
@@ -278,5 +277,5 @@ function updateTime() {
 
 getIpClient();
 getQuote();
-getCity();
+// getCity();
 getLocationData();

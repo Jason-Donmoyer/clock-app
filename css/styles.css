@@ -16,7 +16,7 @@
 
   /* Colors */
   --main-dark-color: rgba(0, 0, 0, 1);
-  --main-nuetral-color: rgva(48, 48, 48, 1);
+  --main-nuetral-color: rgba(48, 48, 48, 1);
   --main-light-color: rgba(255, 255, 255, 1);
 
 }
@@ -228,4 +228,44 @@ html {
   background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(40px);
   display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Stats Content Container */
+.stats-content-container {
+  height: 10rem;
+  width: 86%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* Stat Container */
+.stat-container {
+  height: 1.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--main-nuetral-color);
+}
+
+
+/* Stat Headline */
+.stat-headline {
+  font-size: 0.625rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+
+/* Stat Copy */
+.stat-copy {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: var(--fw-bold);
 }
