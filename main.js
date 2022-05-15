@@ -3,7 +3,7 @@
 // *******************************************************************************************
 
 // Import ipify
-import("https://api.ipify.org?format=jsonp&callback=getIP");
+// import("https://api.ipify.org?format=jsonp&callback=getIP");
 
 
 // *******************************************************************************************
@@ -86,9 +86,23 @@ infoBtn.addEventListener('click', () => {
 //"https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=YOUR-APIKEY"
 
 // Function to get IP adress from client
-function getIP(json) { 
-  ipAddress = json.ip;
-  console.log(`Your IP Address is ${json.ip}`); 
+// function getIP(json) { 
+//   ipAddress = json.ip;
+//   console.log(`Your IP Address is ${json.ip}`); 
+// }
+
+async function getIpClient() {
+  try {
+    const response = await fetch('https://api.ipify.org?format=json'
+    ).then(res => res.json())
+    .then(res => {
+      console.log(res);
+      ipAddress = res.ip;
+    })
+    
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 
@@ -262,6 +276,7 @@ function updateTime() {
 // FUNCTION CALLS
 // *******************************************************************************************
 
+getIpClient();
 getQuote();
-// getCity();
+getCity();
 getLocationData();
