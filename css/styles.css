@@ -165,8 +165,8 @@ html {
 }
 
 
-/* Timezone Copy */
-.timezone-copy {
+/* Timezone Abbreviation Copy */
+.timezone-abbr-copy {
   font-size: 0.9375rem;
   line-height: 1.75rem;
   margin-left: 0.3125rem;

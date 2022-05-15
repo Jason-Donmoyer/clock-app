@@ -30,6 +30,13 @@ const quoteRefresh = document.getElementById('refresh-btn');
 
 // Time Copy Container
 const timeCopyContainer = document.getElementById('time-copy');
+// Timezone Abbreviation
+const timezoneAbbr = document.getElementById('timezone-abbr-copy');
+
+// Location city
+const locationCity = document.getElementById('city-location');
+// Location Country
+const locationCountry = document.getElementById('country-location');
 
 // Info Button
 const infoBtn = document.getElementById('info-btn');
@@ -42,6 +49,15 @@ let btnClicked = false;
 
 // Stats section
 const statsSection = document.getElementById('stats-section');
+// Timezone Copy
+const timezoneCopy = document.getElementById('timezone-copy');
+// Day of Year Copy
+const dayOfYear = document.getElementById('day-of-year-copy');
+// Day of Week Copy
+const dayOfWeek = document.getElementById('day-of-week-copy');
+// Week Number copy
+const weekNumber = document.getElementById('week-number-copy');
+
 
 // *******************************************************************************************
 // EVENT LISTENERS
@@ -114,7 +130,11 @@ async function getLocationData() {
     currentTime = res['datetime'].split('').slice(11, 16).join('');
     console.log(res['datetime']);
     console.log(res['day_of_week']);
-    updateTime();
+    timeCopyContainer.textContent = currentTime;
+    dayOfYear.textContent = res['day_of_year'];
+    dayOfWeek.textContent = res['day_of_week'] + 1;
+    weekNumber.textContent = res['week_number'] + 1;
+    // updateTime();
   });
 }
 
@@ -144,6 +164,10 @@ async function getCity() {
     `https://api.ipbase.com/v2/info?ip=${ipAddress}&apikey=NMXA3YiDSaXKEhEgLUFu7T5LXCHkMAB3cc0nNQaM`
   ).then(res => res.json())
   .then(res => {
+    timezoneAbbr.textContent = res['data'].timezone.code;
+    locationCity.textContent = res['data'].location.city.name;
+    locationCountry.textContent = res['data'].location.region.name;
+    timezoneCopy.textContent = res['data'].timezone.id;
     console.log(res['data'].location.city);
   });
 }
@@ -266,9 +290,9 @@ async function getQuote() {
 
 
 // Function to update time in UI
-function updateTime() {
-  timeCopyContainer.textContent = currentTime;
-}
+// function updateTime() {
+//   timeCopyContainer.textContent = currentTime;
+// }
 
 
 // *******************************************************************************************
@@ -277,5 +301,5 @@ function updateTime() {
 
 getIpClient();
 getQuote();
-// getCity();
+getCity();
 getLocationData();
