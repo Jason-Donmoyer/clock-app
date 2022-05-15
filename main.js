@@ -109,7 +109,7 @@ async function getIpClient() {
 // Function to get data from worldtimeapi
 async function getLocationData() {
   await fetch(
-    `http://worldtimeapi.org/api/ip/${ipAddress}`
+    `https://worldtimeapi.org/api/ip/${ipAddress}`
   ).then(res => res.json())
   .then(res => {
     currentTime = res['datetime'].split('').slice(11, 16).join('');
