@@ -137,6 +137,7 @@ html {
   height: 1.5rem;
   width: 1.5rem;
   background-image: url(../assets/desktop/icon-sun.svg);
+  background-repeat: no-repeat;
 }
 
 
@@ -179,6 +180,7 @@ html {
   line-height: 1.75rem;
   letter-spacing: 0.1875rem;
   font-weight: var(--fw-bold);
+  text-transform: uppercase;
 }
 
 
@@ -226,7 +228,7 @@ html {
 .stats-container {
   height: 38%;
   background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(40.7742px);
   display: none;
   align-items: center;
   justify-content: center;
@@ -268,4 +270,75 @@ html {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: var(--fw-bold);
+}
+
+
+/* ************************************************************************************ */
+                                  /* DARK MODE */
+/* ************************************************************************************ */
+
+
+/* Main Content */
+/* .main-content-dark-bg {
+  background-image: url(../assets/mobile/bg-image-nighttime.jpg); */
+/* } */
+
+
+/* Greeting Icon */
+/* .greeting-icon-dark {
+  background-image: url(../assets/desktop/icon-moon.svg); */
+/* } */
+
+
+/* Stats Container */
+/* .stats-container-dark-bg {
+  background-color: rgba(0, 0, 0, 0.75); */
+/* } */
+
+
+/* Stat Copy */
+/* .stat-headline-dark,
+.stat-copy-dark {
+  color: var(--main-light-color); */
+/* } */
+
+
+/* ************************************************************************************ */
+                                /* MEDIA QUERIES */
+/* ************************************************************************************ */
+
+
+/* TABLET */
+/* 539px Surface Duo */
+@media screen and (min-width: 539px) {
+
+
+  /* Main Content */
+  .main-content {
+    background-image: url(../assets/tablet/bg-image-daytime.jpg);
+  }
+
+
+  /* Quote Container */
+  .quote-container {
+    max-width: 75%;
+    padding-top: 5rem;
+    padding-left: 4rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+
+  /* Quote Content Container */
+  .quote-content-container {
+    margin-bottom: 0.8125rem;
+  }
+
+
+  /* Refresh Button */
+  .refresh-btn {
+    margin-top: 0.3125rem;
+  }
+
+
 }
