@@ -149,6 +149,11 @@ html {
   margin-left: 1rem;
 }
 
+/* Greeting Copy For Tablert and Larger */
+.tab-greeting {
+  display: none;
+}
+
 
 /* Time Container */
 .time-container {
@@ -221,8 +226,9 @@ html {
 }
 
 
-
-/* STATS DROPDOWN */
+/* ******************************************************** */
+                      /* STATS DROPDOWN */
+/* ******************************************************** */
 
 /* Stats container */
 .stats-container {
@@ -339,6 +345,126 @@ html {
   .refresh-btn {
     margin-top: 0.3125rem;
   }
+
+
+  /* Time and Location Container */
+  .time-location-container {
+    height: 22.9375rem;
+    margin-left: 4rem;
+  }
+
+
+  /* Greeting Container */
+  .greeting-container {
+    height: 14.4375rem;
+  }
+
+
+  /* Greeting Copy */
+  .greeting-copy {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.225rem;
+  }
+
+
+  /* Tablet and Larger Greeting Copy */
+  .tab-greeting {
+    display: inline;
+  }
+
+
+  /* Time Container */
+  .time-container {
+    height: 10.9375rem;
+  }
+
+
+  /* Time Copy */
+  .time-copy {
+    font-size: 10.9375rem;
+    line-height: 10.9375rem;
+    letter-spacing: -0.27375rem;
+  }
+
+
+  /* Timezone Abbreviation Copy */
+  .timezone-abbr-copy {
+    font-size: 2rem;
+    margin-left: 0.6875rem;
+  }
+
+
+  /* Location Copy */
+  .location-copy {
+    font-size: 1.125rem;
+    letter-spacing: 0.225rem;
+  }
+
+
+  /* Info Button */
+  .info-btn {
+    height: 3.5rem;
+    width: 9.125rem;
+  }
+
+  /* Info Button Copy */
+  .info-btn-copy {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.3125rem; 
+  }
+
+
+  /* Info Button Icon */
+  .info-btn-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 0.25rem;
+    margin-left: 0.78125rem;
+  }
+
+
+  /* Stats Container */
+  .stats-container {
+    justify-content: flex-start;
+    /* padding-left: 4rem; */
+  }
+
+
+  /* Stats Content Container */
+  .stats-content-container {
+    height: 12.625rem;
+    width: 70%;
+    margin-left: 4rem;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 20%;
+    grid-row-gap: 1.5rem;
+  }
+
+
+  /* Stat Container */
+  .stat-container {
+    height: 4.8125rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Stat Headline */
+  .stat-headline {
+    font-size: 0.8125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.1625rem;
+  }
+
+  /* Stat Copy */
+  .stat-copy {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
 
 
 }
