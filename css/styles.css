@@ -108,7 +108,7 @@ html {
 .time-location-container {
   height: 17rem;
   margin-bottom: 2.5rem;
-  padding-left: 1.59375rem; 
+  margin-left: 1.59375rem; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -316,7 +316,7 @@ html {
 
 /* TABLET */
 /* 539px Surface Duo */
-@media screen and (min-width: 539px) {
+@media screen and (min-width: 767px) {
 
 
   /* Main Content */
@@ -465,6 +465,109 @@ html {
     line-height: 3rem;
   }
 
+  /* DARK MODE */
+
+  /* Main Content */
+  /* .main-content-dark-bg { 
+    background-image: url(../assets/tablet/bg-image-nighttime.jpg); 
+  } */
+
+
+}
+
+
+/* DESKTOP */
+/* 1024 */
+
+
+@media screen and (min-width: 1024px) {
+
+
+  /* Main Content */
+  .main-content {
+    background-image: url(../assets/desktop/bg-image-daytime.jpg);
+  }
+
+
+  /* Quote Container */
+  .quote-container {
+    max-width: 50%;
+    padding-top: 3.5rem;
+    padding-left: 10.3125rem;
+  }
+
+
+  /* Refresh Button */
+  .refresh-btn {
+    margin-top: 0.625rem;
+  }
+
+
+  /* Time and Location Container */
+  .time-location-container {
+    height: 18rem;
+    margin-right: 10.3125rem;
+    margin-bottom: 6.125rem;
+    margin-left: 10.3125rem;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+
+  /* Greeting Container */
+  .greeting-container {
+    height: 18rem;
+  }
+
+
+  /* Greeting Copy */
+  .greeting-copy {
+    font-size: 1.25rem;
+    letter-spacing: 0.25rem;
+  }
+
+
+  /* Time Container */
+  .time-container {
+    height: 12.5rem;
+  }
+
+
+  /* Time Copy */
+  .time-copy {
+    font-size: 12.5rem;
+    line-height: 12.5rem;
+    letter-spacing: -0.3125rem;
+  }
+
+
+  /* Timezone Abbreviation Copy */
+  .timezone-abbr-copy {
+    font-size: 2.5rem;
+  }
+
+
+  /* Location Copy */
+  .location-copy {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+
+
+  /* Stats Content Container */
+  .stats-content-container {
+    height: 12.625rem;
+    width: 60%;
+    margin-left: 10.3125rem;
+  }
+
+
+  /* Stat Container */
+  .stat-container {
+    height: 6.5625rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
 
 }
