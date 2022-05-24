@@ -254,11 +254,21 @@ html {
 /* Stat Container */
 .stat-container {
   height: 1.75rem;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var(--main-nuetral-color);
+}
+
+
+/* Desktop Vertical Line */
+.desktop-vertical-line {
+  display: none;
+  height: 15.75rem;
+  width: 0.0625rem;
+  background-color: var(--main-nuetral-color);
+  opacity: 0.25;
 }
 
 
@@ -435,19 +445,48 @@ html {
   /* Stats Content Container */
   .stats-content-container {
     height: 12.625rem;
-    width: 70%;
+    width: 80%;
+    /* width: 33.625rem; */
     margin-left: 4rem;
     display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 20%;
-    grid-row-gap: 1.5rem;
+    grid-column-gap: 5rem;
+    grid-auto-flow: column;
+    grid-template-areas: 
+      "timezone day-of-week"
+      "day-of-year week-number"  
+    ;
+  }
+
+
+  /* #Timezone */
+  #timezone {
+    grid-area: timezone;
+    /* margin-right: 80px; */
+  }
+
+
+  /* #Day of Year */
+  #day-of-year {
+    grid-area: day-of-year;
+  }
+
+
+  /* #Day of week */
+  #day-of-week {
+    grid-area: day-of-week;
+  }
+
+
+  /* #Week Number */
+  #week-number {
+    grid-area: week-number;
   }
 
 
   /* Stat Container */
   .stat-container {
     height: 4.8125rem;
+    min-width: 9.6875rem;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -556,9 +595,20 @@ html {
 
   /* Stats Content Container */
   .stats-content-container {
-    height: 12.625rem;
+    height: 15.75rem;
     width: 60%;
     margin-left: 10.3125rem;
+    grid-template-rows: 50% 50%;
+    row-gap: 2.625rem;
+    grid-template-areas: 
+      "timezone vertical-line day-of-week"
+      "day-of-year vertical-line week-number"  
+    ;
+  }
+
+  /* Desktop Vertical Line */
+  .desktop-vertical-line {
+    display: block;
   }
 
 
