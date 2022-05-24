@@ -28,6 +28,8 @@ const quoteAuthor = document.getElementById('quote-author');
 // Refresh Quote Button
 const quoteRefresh = document.getElementById('refresh-btn');
 
+// Time and Location Container
+const timeLocationContainer = document.getElementById('time-location-container');
 // Time Copy Container
 const timeCopyContainer = document.getElementById('time-copy');
 // Timezone Abbreviation
@@ -75,8 +77,15 @@ infoBtn.addEventListener('click', () => {
   if (!btnClicked) {
     statsSection.style.display = 'flex';
     quoteContainer.style.display = 'none';
-    bgContainer.style.height = '62%';
-    bgContainer.style.justifyContent = 'flex-end';
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      bgContainer.style.height = '50%';
+      statsSection.style.height = '50%';
+      timeLocationContainer.style.marginBottom = '0px';
+      bgContainer.style.justifyContent = 'center';
+    } else {
+      bgContainer.style.height = '62%';
+      bgContainer.style.justifyContent = 'flex-end';
+    }
     infoBtnCopy.textContent = 'LESS';
     infoBtnIcon.style.backgroundImage = "url('assets/desktop/icon-arrow-up.svg')";
     btnClicked = true;
@@ -87,6 +96,11 @@ infoBtn.addEventListener('click', () => {
     bgContainer.style.justifyContent = 'space-between';
     infoBtnCopy.textContent = 'MORE';
     infoBtnIcon.style.backgroundImage = "url('assets/desktop/icon-arrow-down.svg')";
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      timeLocationContainer.style.marginBottom = '6.125rem';
+    } else {
+      timeLocationContainer.style.marginBottom = '2.5rem';
+    }
     btnClicked = false;
   }
   
