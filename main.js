@@ -8,7 +8,6 @@ let ipAddress = '';
 // Store current time
 let currentTime = '';
 
-
 // Main Content container
 const mainContentContainer = document.getElementById('main-content-container');
 // Main Background Container
@@ -119,14 +118,14 @@ infoBtn.addEventListener('click', () => {
 // *******************************************************************************************
 
 
+// Function to get users IP adress 
 async function getIpClient() {
   try {
     const response = await fetch('https://api.ipify.org?format=json'
     ).then(res => res.json())
     .then(res => {
-      console.log(res);
       ipAddress = res.ip;
-    })
+    });
   } catch (error) {
     console.error(error);
   }
@@ -140,12 +139,10 @@ async function getLocationData() {
   ).then(res => res.json())
   .then(res => {
     currentTime = res['datetime'].split('').slice(11, 16).join('');
-    console.log(res['datetime']);
-    console.log(res['day_of_week']);
     timeCopyContainer.textContent = currentTime;
     dayOfYear.textContent = res['day_of_year'];
     dayOfWeek.textContent = res['day_of_week'] + 1;
-    weekNumber.textContent = res['week_number'] + 1;
+    weekNumber.textContent = res['week_number'];
     updateGreeting(currentTime);
   });
 }
@@ -161,7 +158,6 @@ async function getCity() {
     locationCity.textContent = res['data'].location.city.name;
     locationCountry.textContent = res['data'].location.region.name;
     timezoneCopy.textContent = res['data'].timezone.id;
-    console.log(res['data'].location.city);
   });
 }
 
@@ -172,8 +168,6 @@ async function getQuote() {
     'https://programming-quotes-api.herokuapp.com/Quotes/random'
   ).then(res => res.json())
   .then(res => {
-    console.log(res['en']);
-    console.log(res['author']);
     randomQuote.textContent = res['en'];
     quoteAuthor.textContent = res['author'];
   })
@@ -184,7 +178,6 @@ async function getQuote() {
 function updateGreeting(currentTime) {
   // get hour from current time
   const hour = parseInt(currentTime.split('').slice(0, 2).join(''));
-  console.log(hour);
   if (hour >= 6 && hour <= 11) {
     greetingCopy.innerText = 'GOOD MORNING';
     updateLightMode();

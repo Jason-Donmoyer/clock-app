@@ -29,7 +29,6 @@ html {
   font-size: 16px;
   font-family: var(--main-font-family);
   font-weight: var(--fw-reg);
-  /* color: var(--main-light-color); */
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -93,7 +92,6 @@ html {
 .refresh-btn {
   height: 1.041875rem;
   width: 1.041875rem;
-  /* margin-left: 1.041875rem; */
   background-image: url(../assets/desktop/icon-refresh.svg);
 }
 
@@ -619,7 +617,24 @@ html {
   }
 
 
+  /* ACTIVE MODES */
+
+
+  /* Refresh Button */
+  .refresh-btn:hover {
+    cursor: pointer;
+  }
+
+
+  /* Info Button Icon */
+  .info-btn-icon:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+
   /* DARK MODE */
+
 
   /* Main Content */
   .main-content-dark-bg { 
