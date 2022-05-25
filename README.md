@@ -50,11 +50,6 @@ I used asyncronous functions and fetch quite a bit in this project. I learned ho
 
 I will continue to get better with CSS Grid in future projects. I feel much more comfortable with Flexbox, but really learning how to use the two in conjuction with each other is my goal.
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 ## Author
 
 - Frontend Mentor - [@Jason-Donmoyer](https://www.frontendmentor.io/profile/Jason-Donmoyer)
