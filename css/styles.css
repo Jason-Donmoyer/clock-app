@@ -295,28 +295,28 @@ html {
 
 
 /* Main Content */
-/* .main-content-dark-bg {
-  background-image: url(../assets/mobile/bg-image-nighttime.jpg); */
-/* } */
+.main-content-dark-bg {
+  background-image: url(../assets/mobile/bg-image-nighttime.jpg);
+}
 
 
 /* Greeting Icon */
-/* .greeting-icon-dark {
-  background-image: url(../assets/desktop/icon-moon.svg); */
-/* } */
+.greeting-icon-dark {
+  background-image: url(../assets/desktop/icon-moon.svg); 
+}
 
 
 /* Stats Container */
-/* .stats-container-dark-bg {
-  background-color: rgba(0, 0, 0, 0.75); */
-/* } */
+.stats-container-dark-bg {
+  background-color: rgba(0, 0, 0, 0.75);
+} 
 
 
 /* Stat Copy */
-/* .stat-headline-dark,
+.stat-headline-dark, 
 .stat-copy-dark {
-  color: var(--main-light-color); */
-/* } */
+  color: var(--main-light-color); 
+}
 
 
 /* ************************************************************************************ */
@@ -507,9 +507,9 @@ html {
   /* DARK MODE */
 
   /* Main Content */
-  /* .main-content-dark-bg { 
+  .main-content-dark-bg { 
     background-image: url(../assets/tablet/bg-image-nighttime.jpg); 
-  } */
+  }
 
 
 }
@@ -599,7 +599,6 @@ html {
     width: 60%;
     margin-left: 10.3125rem;
     grid-template-rows: 50% 50%;
-    row-gap: 2.625rem;
     grid-template-areas: 
       "timezone vertical-line day-of-week"
       "day-of-year vertical-line week-number"  
@@ -617,6 +616,20 @@ html {
     height: 6.5625rem;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+
+  /* DARK MODE */
+
+  /* Main Content */
+  .main-content-dark-bg { 
+    background-image: url(../assets/desktop/bg-image-nighttime.jpg); 
+  }
+
+
+  /* Desktop Vertical Line */
+  .desktop-vertical-line-dark-bg {
+    background-color: var(--main-light-color);
   }
 
 

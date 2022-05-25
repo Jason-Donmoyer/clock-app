@@ -13,7 +13,7 @@
 <body class="main-container">
 
   <!-- Main Content Start -->
-  <main class="main-content main-content-dark-bg">
+  <main id="main-content-container" class="main-content">
     <!-- Start Background Div -->
     <div id="main-bg-container" class="main-bg-container">
 
@@ -31,8 +31,8 @@
     <article id="time-location-container" class="time-location-container">
       <div class="greeting-container">
         <div class="greeting-copy-container">
-          <div class="greeting-icon greeting-icon-dark"></div>
-          <h2 id="greeting-copy" class="greeting-copy">GOOD MORNING<span class="tab-greeting">, IT'S CURRENTLY</span></h2>
+          <div id="greeting-icon" class="greeting-icon"></div>
+          <h2 class="greeting-copy"><span id="greeting-copy">GOOD MORNING</span><span class="tab-greeting">, IT'S CURRENTLY</span></h2>
         </div>
         <div class="time-container">
           <h1 id="time-copy" class="time-copy">34:34</h1>
@@ -57,38 +57,38 @@
 
     <!-- Stats Container Start -->
     <!-- Show / Hide on Button Click Event -->
-    <section id="stats-section" class="stats-container stats-container-dark-bg">
+    <section id="stats-section" class="stats-container">
       <!-- Stats Content Container Start -->
       <div class="stats-content-container">
 
         <!-- Timezone Container Start -->
         <article id="timezone" class="stat-container">
-          <h4 class="stat-headline stat-headline-dark">Current timezone</h4>
-          <p id="timezone-copy" class="stat-copy stat-copy-dark">Europe/London</p>
+          <h4 class="stat-headline">Current timezone</h4>
+          <p id="timezone-copy" class="stat-copy ">Europe/London</p>
         </article>
         <!-- Timezone Container End -->
 
         <!-- Day of Year Container Start -->
         <article id="day-of-year" class="stat-container">
-          <h4 class="stat-headline stat-headline-dark">Day of the year</h4>
-          <p id="day-of-year-copy" class="stat-copy stat-copy-dark">295</p>
+          <h4 class="stat-headline">Day of the year</h4>
+          <p id="day-of-year-copy" class="stat-copy ">295</p>
         </article>
         <!-- Day of Year Container End -->
 
         <!-- Desktop Vertical Line -->
-        <div class="desktop-vertical-line"></div>
+        <div id="desktop-vertical-line" class="desktop-vertical-line"></div>
 
         <!-- Day of Week Container Start -->
         <article id="day-of-week" class="stat-container">
-          <h4 class="stat-headline stat-headline-dark">Day of the week</h4>
-          <p id="day-of-week-copy" class="stat-copy stat-copy-dark">5</p>
+          <h4 class="stat-headline">Day of the week</h4>
+          <p id="day-of-week-copy" class="stat-copy ">5</p>
         </article>
         <!-- Day of Week Container End -->
 
         <!-- Week Number Container Start -->
         <article id="week-number" class="stat-container">
-          <h4 class="stat-headline stat-headline-dark">Week number</h4>
-          <p id="week-number-copy" class="stat-copy stat-copy-dark">42</p>
+          <h4 class="stat-headline">Week number</h4>
+          <p id="week-number-copy" class="stat-copy ">42</p>
         </article>
         <!-- Week Number Container End -->
       </div>

@@ -1,12 +1,4 @@
 // *******************************************************************************************
-// IMPORTS
-// *******************************************************************************************
-
-// Import ipify
-// import("https://api.ipify.org?format=jsonp&callback=getIP");
-
-
-// *******************************************************************************************
 // VARIABLES
 // *******************************************************************************************
 
@@ -16,6 +8,9 @@ let ipAddress = '';
 // Store current time
 let currentTime = '';
 
+
+// Main Content container
+const mainContentContainer = document.getElementById('main-content-container');
 // Main Background Container
 const bgContainer = document.getElementById('main-bg-container');
 
@@ -34,6 +29,10 @@ const timeLocationContainer = document.getElementById('time-location-container')
 const timeCopyContainer = document.getElementById('time-copy');
 // Timezone Abbreviation
 const timezoneAbbr = document.getElementById('timezone-abbr-copy');
+// Greeting Icon
+const greetingIcon = document.getElementById('greeting-icon');
+// Greeting Copy
+const greetingCopy = document.getElementById('greeting-copy');
 
 // Location city
 const locationCity = document.getElementById('city-location');
@@ -59,6 +58,14 @@ const dayOfYear = document.getElementById('day-of-year-copy');
 const dayOfWeek = document.getElementById('day-of-week-copy');
 // Week Number copy
 const weekNumber = document.getElementById('week-number-copy');
+
+// Desktop Verticle Line
+const desktopVerticalLine = document.getElementById('desktop-vertical-line');
+
+// Stat Headlines 
+const statHeadlines = document.querySelectorAll('.stat-headline');
+// Stat Copy 
+const statCopy = document.querySelectorAll('.stat-copy');
 
 
 // *******************************************************************************************
@@ -111,15 +118,6 @@ infoBtn.addEventListener('click', () => {
 // FUNCTIONS
 // *******************************************************************************************
 
-// IPBase Key
-// NMXA3YiDSaXKEhEgLUFu7T5LXCHkMAB3cc0nNQaM
-//"https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=YOUR-APIKEY"
-
-// Function to get IP adress from client
-// function getIP(json) { 
-//   ipAddress = json.ip;
-//   console.log(`Your IP Address is ${json.ip}`); 
-// }
 
 async function getIpClient() {
   try {
@@ -148,28 +146,9 @@ async function getLocationData() {
     dayOfYear.textContent = res['day_of_year'];
     dayOfWeek.textContent = res['day_of_week'] + 1;
     weekNumber.textContent = res['week_number'] + 1;
-    // updateTime();
+    updateGreeting(currentTime);
   });
 }
-
-
-//{
-//   "abbreviation": "EDT",
-//   "client_ip": "100.35.21.208",
-//   "datetime": "2022-05-11T16:49:09.960370-04:00",
-//   "day_of_week": 3,
-//   "day_of_year": 131,
-//   "dst": true,
-//   "dst_from": "2022-03-13T07:00:00+00:00",
-//   "dst_offset": 3600,
-//   "dst_until": "2022-11-06T06:00:00+00:00",
-//   "raw_offset": -18000,
-//   "timezone": "America/New_York",
-//   "unixtime": 1652302149,
-//   "utc_datetime": "2022-05-11T20:49:09.960370+00:00",
-//   "utc_offset": "-04:00",
-//   "week_number": 19
-// }
 
 
 // Function to get data from freegeoip
@@ -185,108 +164,6 @@ async function getCity() {
     console.log(res['data'].location.city);
   });
 }
-// 20220511171729
-// https://api.ipbase.com/v2/info?ip=100.35.21.208&apikey=NMXA3YiDSaXKEhEgLUFu7T5LXCHkMAB3cc0nNQaM
-
-// {
-//   "data": {
-//     "timezone": {
-//       "id": "America/New_York",
-//       "current_time": "2022-05-11T17:17:28-04:00",
-//       "code": "EDT",
-//       "is_daylight_saving": true,
-//       "gmt_offset": -14400
-//     },
-//     "ip": "100.35.21.208",
-//     "type": "v4",
-//     "connection": {
-//       "asn": 701,
-//       "organization": "UUNET",
-//       "isp": "Mci Communications Services Inc. D/B/a Verizon Business"
-//     },
-//     "location": {
-//       "geonames_id": 5101170,
-//       "latitude": 40.42716979980469,
-//       "longitude": -74.20256042480469,
-//       "zip": "07735",
-//       "continent": {
-//         "code": "NA",
-//         "name": "North America",
-//         "name_translated": "North America"
-//       },
-//       "country": {
-//         "alpha2": "US",
-//         "alpha3": "USA",
-//         "calling_codes": [
-//           "+1"
-//         ],
-//         "currencies": [
-//           {
-//             "symbol": "$",
-//             "name": "US Dollar",
-//             "symbol_native": "$",
-//             "decimal_digits": 2,
-//             "rounding": 0,
-//             "code": "USD",
-//             "name_plural": "US dollars"
-//           }
-//         ],
-//         "emoji": "🇺🇸",
-//         "ioc": "USA",
-//         "languages": [
-//           {
-//             "name": "English",
-//             "name_native": "English"
-//           }
-//         ],
-//         "name": "United States",
-//         "name_translated": "United States",
-//         "timezones": [
-//           "America/New_York",
-//           "America/Detroit",
-//           "America/Kentucky/Louisville",
-//           "America/Kentucky/Monticello",
-//           "America/Indiana/Indianapolis",
-//           "America/Indiana/Vincennes",
-//           "America/Indiana/Winamac",
-//           "America/Indiana/Marengo",
-//           "America/Indiana/Petersburg",
-//           "America/Indiana/Vevay",
-//           "America/Chicago",
-//           "America/Indiana/Tell_City",
-//           "America/Indiana/Knox",
-//           "America/Menominee",
-//           "America/North_Dakota/Center",
-//           "America/North_Dakota/New_Salem",
-//           "America/North_Dakota/Beulah",
-//           "America/Denver",
-//           "America/Boise",
-//           "America/Phoenix",
-//           "America/Los_Angeles",
-//           "America/Anchorage",
-//           "America/Juneau",
-//           "America/Sitka",
-//           "America/Metlakatla",
-//           "America/Yakutat",
-//           "America/Nome",
-//           "America/Adak",
-//           "Pacific/Honolulu"
-//         ],
-//         "is_in_european_union": false
-//       },
-//       "city": {
-//         "name": "Middletown",
-//         "name_translated": "Middletown"
-//       },
-//       "region": {
-//         "fips": "",
-//         "alpha2": "",
-//         "name": "New Jersey",
-//         "name_translated": "New Jersey"
-//       }
-//     }
-//   }
-// }
 
 
 // Function to get random quotes
@@ -303,10 +180,43 @@ async function getQuote() {
 }
 
 
-// Function to update time in UI
-// function updateTime() {
-//   timeCopyContainer.textContent = currentTime;
-// }
+// Helper Function to upddate greeting in UI
+function updateGreeting(currentTime) {
+  // get hour from current time
+  const hour = parseInt(currentTime.split('').slice(0, 2).join(''));
+  console.log(hour);
+  if (hour >= 6 && hour <= 11) {
+    greetingCopy.innerText = 'GOOD MORNING';
+    updateLightMode();
+  } else if (hour >= 12 && hour <= 20) {
+    greetingCopy.innerText = 'GOOD AFTERNOON';
+    updateLightMode();
+  } else {
+    greetingCopy.innerText = 'GOOD EVENING';
+    updateDarkMode();
+  }
+}
+
+
+// Helper Function to update light mode
+function updateLightMode() {
+  mainContentContainer.classList.remove('main-content-dark-bg');
+  greetingIcon.classList.remove('greeting-icon-dark');
+  statsSection.classList.remove('stats-container-dark-bg');
+  statHeadlines.forEach(e => e.classList.remove('stat-headline-dark'));
+  statCopy.forEach(e => e.classList.remove('stat-copy-dark'));
+  desktopVerticalLine.classList.remove('desktop-vertical-line-dark-bg');
+}
+
+// Helper Function to update dark mode
+function updateDarkMode() {
+  mainContentContainer.classList.add('main-content-dark-bg');
+  greetingIcon.classList.add('greeting-icon-dark');
+  statsSection.classList.add('stats-container-dark-bg');
+  statHeadlines.forEach(e => e.classList.add('stat-headline-dark'));
+  statCopy.forEach(e => e.classList.add('stat-copy-dark'));
+  desktopVerticalLine.classList.add('desktop-vertical-line-dark-bg');
+}
 
 
 // *******************************************************************************************
