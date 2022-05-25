@@ -252,7 +252,6 @@ html {
 /* Stat Container */
 .stat-container {
   height: 1.75rem;
-  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -436,7 +435,6 @@ html {
   /* Stats Container */
   .stats-container {
     justify-content: flex-start;
-    /* padding-left: 4rem; */
   }
 
 
@@ -444,7 +442,6 @@ html {
   .stats-content-container {
     height: 12.625rem;
     width: 80%;
-    /* width: 33.625rem; */
     margin-left: 4rem;
     display: grid;
     grid-column-gap: 5rem;
